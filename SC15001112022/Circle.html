@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Area Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .calculator {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <h1>Circle Area Calculator</h1>
+    <input type="number" id="radius" placeholder="Enter radius" min="0" step="any">
+    <button onclick="calculateArea()">Calculate Area</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function calculateArea() {
+        const radius = document.getElementById('radius').value;
+        if (radius) {
+            const area = Math.PI * Math.pow(radius, 2);
+            document.getElementById('result').innerText = `The area of the circle is ${area.toFixed(2)} square units.`;
+        } else {
+            document.getElementById('result').innerText = 'Please enter a valid radius.';
+        }
+    }
+</script>
+
+</body>
+</html>

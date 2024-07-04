@@ -1,0 +1,22 @@
+body {
+    background-color: orange;
+}
+
+h1, h3 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+marquee {
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: ;
+    margin-right: 10px;
+}
